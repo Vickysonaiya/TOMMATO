@@ -10,7 +10,7 @@ import Verify from './pages/Verify/Verify'
 import MyOrders from './pages/MyOrders/myOrders'
 
 const App = () => {
-  //set up in git success
+  //set up in git success  hjhjh
 
   const [showLogin,setShowLogin] = useState(false)
 
