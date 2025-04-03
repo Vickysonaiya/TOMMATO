@@ -10,6 +10,28 @@
     font-size: max(1vw,12px);
 }
 
+.quantity-control {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-control button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  .quantity-control button:hover {
+    background-color: #aaa;
+  }
+  
+  .quantity-control p {
+    margin: 0 10px;
+  }
+
 .cart-items-item{
     margin: 10px 0px;
     color: black;   

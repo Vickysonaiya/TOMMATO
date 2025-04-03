@@ -52,9 +52,9 @@ const Footer = () => {
                 <div className="footer-content-right">
                     <h2>GET IN TOUCH</h2>
                     <ul>  
-                        <li><a href="tel:+919106471172" target='_blank'>+91-910-647-1172</a></li>  
-                        <li><a href="https://wa.me/9106471172" target='_blank'>+91-910-647-1172 (WhatsApp)</a></li>  
-                        <li><a href="mailto:contact@tomato.com" target='_blank'>contact@tomato.com</a></li>  
+                        <li><a href="tel:+919106471172" target='_blank'>+91-91064-71172</a></li>  
+                        <li><a href="https://wa.me/9106471172" target='_blank'>+91-91064-71172 (WhatsApp)</a></li>  
+                        <li><a href="mailto:contact@tomato.com" target='_blank'>vickysonaiya0189@gmail.com</a></li>  
                     </ul>
                 </div>
             </div>

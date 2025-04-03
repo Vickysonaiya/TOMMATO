@@ -29,6 +29,27 @@ const StoreContextProvider = (props) => {
         }
     }
 
+    const updateCartQuantity = async (itemId, quantity) => {
+        if (quantity === -1 && cartItems[itemId] > 1) {
+          setCartItems(prevState => ({ ...prevState, [itemId]: prevState[itemId] - 1 }));
+          if (token) {
+            await axios.post(url+"/api/cart/remove",{itemId},{headers:{token}})
+          }
+        } else if (quantity === 1) {
+          setCartItems(prevState => ({ ...prevState, [itemId]: prevState[itemId] + 1 }));
+          if (token) {
+            await axios.post(url+"/api/cart/add",{itemId},{headers:{token}})
+          }
+        }
+      };
+      
+      const removeItemFromCart = async (itemId) => {
+        setCartItems(prevState => ({...prevState, [itemId]: 0}));
+        if (token) {
+          await axios.post(url+"/api/cart/remove",{itemId},{headers:{token}})
+        }
+      };
+
     const getTotalCartAmount = () => {
         let totalAmount = 0;
         for (const item in cartItems) {
@@ -61,11 +82,6 @@ const StoreContextProvider = (props) => {
         loadData();
     },[])
 
-
-    // useEffect(() => {
-    //     console.log(cartItems);
-    // }, [cartItems])
-
     const ContextValue = {
         food_list,
         cartItems,
@@ -73,6 +89,8 @@ const StoreContextProvider = (props) => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
+        updateCartQuantity,
+        removeItemFromCart,
         url,
         token,
         setToken
