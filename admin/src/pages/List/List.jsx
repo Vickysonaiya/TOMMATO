@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const List = () => {
 
-  const url = "http://localhost:4000"
+  const url = "https://tommato-backend-4knp.onrender.com"
 
   const [list, setList] = useState([]);
 
