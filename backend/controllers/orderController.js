@@ -9,7 +9,7 @@ import Stripe from "stripe";
 
 const placeOrder = async  (req,res) => {
 
-    const frontend_url = "http://localhost:5173";
+    const frontend_url = "https://tommato-frontend.onrender.com/";
 
 
     try {
